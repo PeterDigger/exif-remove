@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXIF remover</title>
+    <style>
+        img{
+            max-width:200px;
+        }
+    </style>
+</head>
+<body>
+    <input id="erd" type="file"/>
+    
+    <img id="orig" title="Original">
+    <img id="mod" title="Modified">
+    
+    <!-- Need to loac element before the script -->
+    <script src="index.js"></script>
+    
+    <div>
+        <h1>Strip EXIF data from image</h1>
+        <ul>
+            <li>Look up the <a href="http://en.wikipedia.org/wiki/JPEG_File_Interchange_Format" target="_blank">file format </a>and <a href="http://www.media.mit.edu/pia/Research/deepview/exif.html" target="_blank">exif format</a></li>
+            <li>Read the file into arraybuffer</li>
+            <li>Find the required data and remove it</li>        
+            <li>Create a blob from the remaining data</li>
+            <li>Upload it with ajax</li>
+        </ul>
+        <p>Source: <a href="https://stackoverflow.com/questions/27638402/strip-exif-data-from-image">https://stackoverflow.com/questions/27638402/strip-exif-data-from-image</a></p>
+        <p>Additional source:</p>
+        <ul>
+            <li>onload Event - <a href="https://www.w3schools.com/jsref/event_onload.asp">https://www.w3schools.com/jsref/event_onload.asp</a></li>
+            <li>What does .files[0] represent in javascript/jQuery? - <a href="https://stackoverflow.com/questions/41557711/what-does-files0-represent-in-javascript-jquery">https://stackoverflow.com/questions/41557711/what-does-files0-represent-in-javascript-jquery</a></li>
+            <li>Including JavaScript In Your Page - <a href="http://web.simmons.edu/~grabiner/comm244/weeknine/including-javascript.html#:~:text=To%20include%20an%20external%20JavaScript%20file%2C%20we%20can%20use%20the,path%20to%20your%20JavaScript%20file.&text=This%20script%20tag%20should%20be,tags%20in%20your%20HTML%20document.">http://web.simmons.edu/~grabiner/comm244/weeknine/including-javascript.html#:~:text=To%20include%20an%20external%20JavaScript%20file%2C%20we%20can%20use%20the,path%20to%20your%20JavaScript%20file.&text=This%20script%20tag%20should%20be,tags%20in%20your%20HTML%20document.</a></li>
+            <li>What's the best way to find the first JPEG frame tag (0xFFD8) in a proprietary video format? - <a href="https://www.mathworks.com/matlabcentral/answers/90535-what-s-the-best-way-to-find-the-first-jpeg-frame-tag-0xffd8-in-a-proprietary-video-format">https://www.mathworks.com/matlabcentral/answers/90535-what-s-the-best-way-to-find-the-first-jpeg-frame-tag-0xffd8-in-a-proprietary-video-format</a></li>
+            <li>How To Make A Drag-and-Drop File Uploader With Vanilla JavaScript <a href="https://www.smashingmagazine.com/2018/01/drag-drop-file-uploader-vanilla-js/">https://www.smashingmagazine.com/2018/01/drag-drop-file-uploader-vanilla-js/</a></li>
+            <li>HTML Drag and Drop API - <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API#drag_events">https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API#drag_events  </a></li>
+        </ul>
+    </div>
+
+</body>
+</html>
